@@ -1,0 +1,330 @@
+/**
+ * ============================================================
+ *  SITE CONTENT ,  edit everything about Denise here.
+ *  No need to touch the page code. Change text, swap image
+ *  paths, add/remove projects and services in this one file.
+ *
+ *  Images: drop files into /public/images and reference them
+ *  as "/images/your-file.jpg".
+ * ============================================================
+ */
+
+export const site = {
+  name: "Denise Griffin Interiors",
+  // Owner's name, used where a person reads better than the business name.
+  owner: "Denise Griffin",
+  // Two-line wordmark logo (top line larger, bottom line letter-spaced).
+  wordmark: { top: "Denise Griffin", bottom: "Interiors" },
+  role: "Residential Interior Design",
+  // Short tagline used in the hero + browser tab.
+  tagline: "Interiors designed to feel like you.",
+  // 1–2 sentence description used for SEO + the home intro.
+  description:
+    "Denise Griffin is a residential interior designer in Dade City, FL, creating warm, collected homes that balance comfort and elegance, serving Tampa, Wesley Chapel, Lutz, and the surrounding 40 miles.",
+  email: "hello@denisegriffininteriors.com",
+  phone: "", // optional, e.g. "+1 (555) 123-4567"
+  location: "Dade City, FL · serving Tampa & the surrounding 40 miles",
+  socials: {
+    instagram: "https://www.instagram.com/denisegriffininteriors",
+    pinterest: "",
+    houzz: "",
+  },
+};
+
+/* ---- LOCAL SEO / AEO ----
+   Denise is a Service-Area Business based in Dade City, FL, serving clients
+   in person within ~40 miles. These values power the LocalBusiness schema,
+   the service-area copy, and the city pages. Update the town list and rates
+   here and they propagate everywhere. */
+export type Area = {
+  slug: string;
+  name: string; // city name only
+  county: string;
+  // Short one-liner for the index cards.
+  blurb: string;
+  // Answer-first lead paragraph (~45–55 words), written so AI answer engines
+  // and Google can lift it cleanly. Unique to each area.
+  intro: string;
+  // Two short, locally specific paragraphs (unique per area, no duplicate copy).
+  body: [string, string];
+};
+
+export const local = {
+  baseCity: "Dade City",
+  state: "FL",
+  // Approx geo of Dade City, FL (used for LocalBusiness schema).
+  geo: { lat: 28.3647, lng: -82.1959 },
+  serviceRadiusMiles: 40,
+  hourlyRate: 100,
+  priceRange: "$$",
+  // Display hours (also used for schema). Edit to Denise's real availability.
+  hours: "By appointment, Mon–Sat",
+  // Curated higher-end areas within ~40 miles of Dade City. Each becomes its
+  // own SEO landing page and a schema areaServed entry.
+  areas: [
+    {
+      slug: "dade-city",
+      name: "Dade City",
+      county: "Pasco County",
+      blurb: "Historic homes and new builds on acreage in the heart of Pasco.",
+      intro:
+        "Denise Griffin Interiors is a residential interior designer based in Dade City, FL. We design warm, collected homes, from the historic houses near downtown to new builds on acreage, handling concept, sourcing, and styling start to finish, at $100/hour.",
+      body: [
+        "As our home base, Dade City is where it all started. We love its oak-lined streets, brick downtown, and the mix of character-filled older homes and fresh new construction on larger lots, each one asking for a slightly different touch.",
+        "Whether you're warming up a historic home or furnishing a brand-new build from empty rooms, we create interiors that feel personal, layered, and made for how you actually live.",
+      ],
+    },
+    {
+      slug: "wesley-chapel",
+      name: "Wesley Chapel",
+      county: "Pasco County",
+      blurb: "New construction and master-planned communities, beautifully finished.",
+      intro:
+        "Looking for an interior designer in Wesley Chapel, FL? Denise Griffin Interiors furnishes and designs new-construction homes across communities like Estancia, Seven Oaks, and Epperson, turning builder-grade rooms into warm, collected spaces, start to finish.",
+      body: [
+        "Wesley Chapel is full of beautiful new builds, and empty rooms that can feel hard to start. That's exactly where we shine: space planning, furniture, and the finishing layers that make a new house finally feel like home.",
+        "From a single great room to a whole-home furnishing package, we bring a designer's eye to fast-growing Wesley Chapel without the big-city price tag.",
+      ],
+    },
+    {
+      slug: "lutz",
+      name: "Lutz",
+      county: "Pasco & Hillsborough",
+      blurb: "Wooded lots and lakefront estates with room to breathe.",
+      intro:
+        "Denise Griffin Interiors offers residential interior design in Lutz, FL, designing warm, elevated interiors for the area's wooded lots and lakefront estates. Full-service design, furnishing, and styling, managed from concept through install day.",
+      body: [
+        "Lutz homes tend to have space, privacy, and natural surroundings to work with, gorgeous bones that deserve interiors with the same sense of calm and quality.",
+        "We help Lutz homeowners pull a whole home together with considered furniture, art, and lighting, so the inside feels as grounded and beautiful as the setting outside.",
+      ],
+    },
+    {
+      slug: "land-o-lakes",
+      name: "Land O' Lakes",
+      county: "Pasco County",
+      blurb: "Gated communities and family estates by the water.",
+      intro:
+        "Denise Griffin Interiors is a residential interior designer serving Land O' Lakes, FL. We design and style family homes and estates across the area's gated and lakeside communities, comfortable, elevated, and tailored to how your family lives.",
+      body: [
+        "Land O' Lakes families want homes that are both beautiful and genuinely livable, spaces that look polished but can still handle real, everyday life.",
+        "From layout and furniture to the final styled shelf, we create interiors that feel warm and collected, never stiff or showroom-like.",
+      ],
+    },
+    {
+      slug: "odessa",
+      name: "Odessa",
+      county: "Pasco & Hillsborough",
+      blurb: "Luxury estates, acreage, and Keystone-area living.",
+      intro:
+        "Denise Griffin Interiors provides interior design in Odessa, FL, designing for the area's luxury estates, acreage homes, and Keystone-area communities. Full-service residential design with a warm, collected aesthetic, from concept to final styling.",
+      body: [
+        "Odessa's larger estate homes call for interiors with presence and restraint in equal measure, rooms that feel rich and layered without ever feeling cold.",
+        "We bring a thoughtful, high-end approach to Odessa homes, sourcing pieces with character and styling every space so it feels intentional and complete.",
+      ],
+    },
+    {
+      slug: "trinity",
+      name: "Trinity",
+      county: "Pasco County",
+      blurb: "Upscale planned and golf communities, freshly styled.",
+      intro:
+        "Denise Griffin Interiors offers residential interior design in Trinity, FL, furnishing and styling homes across the area's upscale planned and golf communities. We handle design, sourcing, and the finishing touches that make a house feel like home.",
+      body: [
+        "Trinity's planned communities are full of well-built homes ready for interiors with warmth and personality layered in.",
+        "Whether you're furnishing from scratch or refreshing a few key rooms, we create calm, collected spaces tailored to your taste and lifestyle.",
+      ],
+    },
+    {
+      slug: "new-tampa",
+      name: "New Tampa",
+      county: "Hillsborough County",
+      blurb: "Tampa Palms, Hunter's Green, and gated golf living.",
+      intro:
+        "Denise Griffin Interiors is a residential interior designer serving New Tampa, FL, including Tampa Palms, Hunter's Green, and the area's gated golf communities. We design warm, elevated interiors and manage the project from concept to styled install.",
+      body: [
+        "New Tampa's established gated communities have beautiful homes that benefit from a designer's eye, updated furnishings, refined layouts, and a more collected, current feel.",
+        "We help New Tampa homeowners move from 'nice house' to a home that feels truly theirs, with interiors layered for comfort and warmth.",
+      ],
+    },
+    {
+      slug: "south-tampa",
+      name: "South Tampa",
+      county: "Hillsborough County",
+      blurb: "Hyde Park bungalows and Davis Islands waterfront.",
+      intro:
+        "Denise Griffin Interiors offers interior design in South Tampa, FL, from historic Hyde Park bungalows to Davis Islands waterfront homes. We design warm, collected, design-forward interiors that respect each home's character, from concept to final styling.",
+      body: [
+        "South Tampa is one of the area's most design-aware neighborhoods, full of character homes, historic bungalows, renovated classics, and waterfront properties, that reward a thoughtful, layered approach.",
+        "We balance old and new in South Tampa interiors: honoring original charm while bringing in the comfort, function, and styled detail of a home designed for today.",
+      ],
+    },
+  ] as Area[],
+};
+
+// Plain list of area names, used by the LocalBusiness schema's areaServed.
+export const serviceAreaNames = local.areas.map((a) => a.name);
+
+/* ---- HOME: featured stats / signature line ---- */
+export const home = {
+  heroImage: "/images/hero.jpg", // first poster (used as the LCP image)
+  // Rotating video hero (Tesla-style): plays each clip, crossfades to the next,
+  // loops. Add/remove clips here, each needs a matching poster still.
+  heroSlides: [
+    {
+      src: "/images/hero.mp4",
+      poster: "/images/hero.jpg",
+      alt: "A styled vignette by Denise Griffin Interiors",
+    },
+    {
+      src: "/images/hero-bath.mp4",
+      poster: "/images/bath-vanity.jpg",
+      alt: "A spa-like primary bath designed by Denise Griffin Interiors",
+    },
+    {
+      src: "/images/hero-bedroom.mp4",
+      poster: "/images/primary-bath.jpg",
+      alt: "A warm primary bedroom designed by Denise Griffin Interiors",
+    },
+  ],
+  intro:
+    "I help clients turn rooms into spaces that work for real life and still feel like a magazine spread. Every project starts with how you actually want to live in the space.",
+  stats: [
+    { value: "Local", label: "In person across Tampa & Pasco" },
+    { value: "$100/hr", label: "Clear, honest pricing" },
+    { value: "Full-service", label: "Concept to final styling" },
+  ],
+};
+
+/* ---- SERVICES ---- */
+export type Service = {
+  title: string;
+  blurb: string;
+  details: string[];
+};
+
+export const services: Service[] = [
+  {
+    title: "Full-Service Interior Design",
+    blurb:
+      "End-to-end residential design for a room or a whole home, concept, space planning, sourcing, and styling, managed start to finish.",
+    details: [
+      "In-home consultation & space planning",
+      "Custom design concept, materials & sourcing",
+      "Procurement, install day & final styling",
+    ],
+  },
+  {
+    title: "Furnishing & Styling",
+    blurb:
+      "The furniture, art, and finishing layers that turn a house into a home that feels collected, warm, and complete.",
+    details: [
+      "Furniture selection & layout",
+      "Art, lighting & accessories",
+      "Final styling & install day",
+    ],
+  },
+  {
+    title: "Design Consultation",
+    blurb:
+      "A focused in-home session to set your direction, unblock a tricky room, and give you a clear, confident plan.",
+    details: [
+      "60–90 minute in-home walkthrough",
+      "On-the-spot guidance & priorities",
+      "Follow-up summary with next steps",
+    ],
+  },
+];
+
+/* ---- PORTFOLIO ----
+   Each project shows in the gallery. `image` is the cover.
+   Add as many as you like. */
+export type Project = {
+  slug: string;
+  title: string;
+  category: string; // e.g. "Living Space", "Bedroom", "Bathroom"
+  year: string;
+  image: string; // cover photo
+  description: string;
+  ready?: boolean; // true once a real photo is in place (else shows a placeholder)
+  gallery?: string[]; // detail / close-up shots shown under the cover
+};
+
+export const projects: Project[] = [
+  {
+    slug: "spa-like-primary-bath",
+    title: "Spa-Like Primary Bath",
+    category: "Bathroom",
+    year: "2025",
+    image: "/images/bath-vanity.jpg",
+    description:
+      "A dated primary bath reimagined with a warm custom wood vanity, marble counters, brass fixtures, a sculptural mirror, and soft, spa-like calm.",
+    ready: true,
+    gallery: ["/images/bath-after-b.jpg"],
+  },
+  {
+    slug: "warm-primary-bedroom",
+    title: "Warm Primary Bedroom",
+    category: "Bedroom",
+    year: "2025",
+    image: "/images/primary-bath.jpg",
+    description:
+      "Terracotta velvet, layered knits, and a black-and-white gallery wall turn a primary bedroom into a warm, collected retreat.",
+    ready: true,
+    gallery: ["/images/IMG_1590.jpg", "/images/IMG_1589.jpg"],
+  },
+  {
+    slug: "light-filled-great-room",
+    title: "Light-Filled Great Room",
+    category: "Living Space",
+    year: "2024",
+    image: "/images/IMG_0114.jpg",
+    description:
+      "A soaring great room grounded with botanical wallpaper, natural branches, layered textiles, and styled, collected detail.",
+    ready: true,
+    gallery: ["/images/IMG_2588.jpg"],
+  },
+];
+
+/* ---- BEFORE / AFTER ----
+   Transformation pairs (same view, before vs after). Powerful proof of skill.
+   Both images must be real photos in /public/images. */
+export type BeforeAfter = {
+  title: string;
+  location: string;
+  before: string;
+  after: string;
+  note: string;
+};
+
+export const beforeAfters: BeforeAfter[] = [
+  {
+    title: "Primary Bath Vanity",
+    location: "Primary Bath, Dade City",
+    before: "/images/IMG_0351.jpg",
+    after: "/images/bath-vanity.jpg",
+    note: "A dated vanity with a pink sink and a fluorescent box light, reimagined with a warm custom wood vanity, marble counters, brass fixtures, and a sculptural mirror.",
+  },
+  {
+    title: "Primary Bedroom",
+    location: "Primary Bedroom, Dade City",
+    before: "/images/IMG_0848.jpg",
+    after: "/images/primary-bath.jpg",
+    note: "A flat, beige primary bedroom restyled into a warm, collected retreat with terracotta velvet, layered knits, and a considered black-and-white gallery wall.",
+  },
+];
+
+/* ---- ABOUT ---- */
+export const about = {
+  portrait: "/images/denise.jpg",
+  heading: "Hi, I'm Denise.",
+  paragraphs: [
+    "I never planned to start a design business. It began as something personal. While my husband and I were building our home, I started sharing the journey on social media just for fun, documenting the whole construction process.",
+    "Once we moved in, I started making videos of how I was decorating and styling each room, and people connected with it. What began as a hobby quickly grew into something more, and in September 2025 I took on my very first client project.",
+    "My approach is simple. I create warm, collected homes that feel personal and lived in, shaped around how you actually want to live. Not trends for the sake of trends, just spaces that feel like the best version of you.",
+  ],
+  values: [
+    { title: "Personal", text: "Every space starts with how you live, not a formula." },
+    { title: "Considered", text: "Thoughtful choices over trends that fade." },
+    { title: "Warm", text: "Rooms that feel as good as they look." },
+  ],
+};

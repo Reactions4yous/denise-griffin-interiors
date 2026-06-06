@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   DESIGN TOKENS  —  the one place to change the look of the site.
+   Swap these values for Denise's real brand palette and the whole
+   site updates. Defaults below are a warm, editorial, minimal base
+   (placeholder until her inspiration sites / brand are finalized).
+   ============================================================ */
+:root {
+  /* Colors — OPTION 1: "Heritage Mauve + Maroon" (Denise's stated preference).
+     Main = warm mauve/dusty-rose neutrals · Secondary = maroon · + white.
+     (Option 2, the Studio McGee brown+cream backup, is noted at the bottom
+     of this file — swap the values to switch palettes.) */
+  --color-bg: #f5efed;        /* page background — soft warm mauve-cream (MAIN) */
+  --color-surface: #ffffff;   /* cards / raised areas — white */
+  --color-ink: #2c2225;       /* primary text — deep aubergine-brown */
+  --color-muted: #7d6e6f;     /* secondary text — muted mauve-taupe */
+  --color-accent: #6f3038;    /* brand accent — maroon (SECONDARY) */
+  --color-accent-soft: #ead9d7;/* dusty-rose tint for hovers/sections */
+  --color-line: #e6dad6;      /* hairline borders */
+
+  /* Typography is injected by next/font in layout.tsx, which defines
+     --font-serif (Cormorant Garamond) and --font-sans (Inter) on <html>. */
+
+  /* Layout rhythm */
+  --section-y: clamp(4rem, 9vw, 8rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* Scroll-driven background eases between section colors (see ScrollTheme).
+     Auto-disabled for prefers-reduced-motion via the block below. */
+  transition: background-color 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---- Reusable utilities ---- */
+.container-wide {
+  width: 100%;
+  max-width: var(--max-w, 1200px);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 3rem);
+}
+
+.section {
+  padding-block: var(--section-y);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.display {
+  font-family: var(--font-serif);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+/* Scroll-reveal: elements fade up as they enter the viewport.
+   Driven by a tiny IntersectionObserver in <Reveal>. */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Subtle link underline animation */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ============================================================
+   OPTION 2 (backup) — "Studio McGee" warm brown + cream.
+   If the maroon ever feels like too much, paste these into the
+   :root block above to switch the whole site's palette.
+
+   --color-bg: #f3ede4;
+   --color-surface: #ffffff;
+   --color-ink: #2b2620;
+   --color-muted: #766c5e;
+   --color-accent: #6b4a38;
+   --color-accent-soft: #e7ddcf;
+   --color-line: #e7ded2;
+   ============================================================ */
