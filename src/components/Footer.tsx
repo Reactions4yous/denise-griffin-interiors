@@ -87,7 +87,12 @@ export function Footer() {
           <p>
             © {year} {site.name}. All rights reserved.
           </p>
-          <p>{site.location}</p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="link-underline hover:text-ink">
+              Privacy Policy
+            </Link>
+            <span>{site.location}</span>
+          </div>
         </div>
       </div>
     </footer>

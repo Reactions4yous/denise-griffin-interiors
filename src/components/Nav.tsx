@@ -140,9 +140,9 @@ export function Nav() {
         />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-accent/[0.06] to-transparent" />
 
-        <div className="relative flex h-full flex-col px-7 pb-12 pt-28">
+        <div className="relative flex h-full flex-col overflow-y-auto px-7 pb-10 pt-24">
           {/* Links */}
-          <ul className="flex flex-1 flex-col justify-center gap-4">
+          <ul className="flex flex-1 flex-col justify-center gap-1">
             {links.map((l, i) => {
               const active = pathname === l.href;
               return (
@@ -156,10 +156,10 @@ export function Nav() {
                   <Link
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="group flex items-baseline py-7"
+                    className="group flex items-baseline py-4"
                   >
                     <span
-                      className={`font-serif text-4xl transition-colors ${
+                      className={`font-serif text-3xl transition-colors ${
                         active ? "text-accent" : "text-ink group-hover:text-accent"
                       }`}
                     >
@@ -173,7 +173,7 @@ export function Nav() {
 
           {/* Footer: CTA + contact */}
           <div
-            className={`mt-8 transition-all duration-500 ease-soft ${
+            className={`mt-6 transition-all duration-500 ease-soft ${
               open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
             }`}
             style={{ transitionDelay: open ? `${120 + links.length * 80}ms` : "0ms" }}

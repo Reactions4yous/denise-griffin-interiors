@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -138,6 +139,18 @@ export function ContactForm() {
       >
         {status === "submitting" ? "Sending…" : "Send message"}
       </button>
+
+      <p className="mt-4 text-xs leading-relaxed text-muted">
+        Your details are only used to reply to you, never sold or shared. See
+        our{" "}
+        <Link
+          href="/privacy"
+          className="link-underline text-ink/80 hover:text-accent"
+        >
+          Privacy Policy
+        </Link>
+        .
+      </p>
     </form>
   );
 }
