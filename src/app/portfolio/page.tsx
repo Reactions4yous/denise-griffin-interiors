@@ -22,7 +22,7 @@ export default function PortfolioPage() {
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted">
               Every project is shaped around the people who live there. Here are
-              a few of my favourites.
+              a few of my favorites.
             </p>
           </Reveal>
         </div>
@@ -38,14 +38,9 @@ export default function PortfolioPage() {
                 <article className="grid items-center gap-8 md:grid-cols-2 md:gap-14">
                   {/* Intro */}
                   <div className={`max-w-md ${flip ? "md:order-2" : ""}`}>
-                    <div className="flex items-baseline gap-4">
-                      <p className="text-xs uppercase tracking-widest text-accent">
-                        {p.category}
-                      </p>
-                      <span className="text-xs uppercase tracking-widest text-muted">
-                        {p.year}
-                      </span>
-                    </div>
+                    <p className="text-xs uppercase tracking-widest text-accent">
+                      {p.category}
+                    </p>
                     <h2 className="mt-2 font-serif text-3xl text-ink sm:text-4xl">
                       {p.title}
                     </h2>

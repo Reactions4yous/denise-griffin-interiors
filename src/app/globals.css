@@ -28,12 +28,84 @@
   --section-y: clamp(4rem, 9vw, 8rem);
 }
 
+/* ============================================================
+   PALETTE OPTIONS  —  live preview switcher (<ThemeSwitcher>).
+   Each block below overrides the brand tokens when its name is set on
+   <html data-theme="…">. This lets Denise flip palettes from the on-page
+   "Theme" control to get a feel for each. The DEFAULT (no data-theme) is
+   Option 1 "Heritage Mauve" defined in :root above. To lock any option in
+   permanently, copy its values into :root and remove the switcher.
+   Keep these in sync with PALETTES[] in src/components/ThemeSwitcher.tsx.
+   ============================================================ */
+
+/* Option 1 — Heritage Mauve + Maroon (same as the :root default; listed so the
+   switcher can return to it). Main = warm mauve · Secondary = maroon · white. */
+html[data-theme="mauve"] {
+  --color-bg: #f5efed;
+  --color-surface: #ffffff;
+  --color-ink: #2c2225;
+  --color-muted: #7d6e6f;
+  --color-accent: #6f3038;
+  --color-accent-soft: #ead9d7;
+  --color-line: #e6dad6;
+}
+
+/* Option 2 — Studio Greige + Maroon (Denise's stated #1: Studio McGee warm
+   greige as the MAIN, maroon as the SECONDARY, white). */
+html[data-theme="greige"] {
+  --color-bg: #f3ede4;
+  --color-surface: #ffffff;
+  --color-ink: #2b2620;
+  --color-muted: #766c5e;
+  --color-accent: #6f3038;
+  --color-accent-soft: #e7ddcf;
+  --color-line: #e7ded2;
+}
+
+/* Option 3 — Heritage Brown (the "if the maroon is too much" backup: warm
+   Studio McGee brown + cream, no maroon at all). */
+html[data-theme="brown"] {
+  --color-bg: #f3ede4;
+  --color-surface: #ffffff;
+  --color-ink: #2b2620;
+  --color-muted: #766c5e;
+  --color-accent: #6b4a38;
+  --color-accent-soft: #e7ddcf;
+  --color-line: #e7ded2;
+}
+
+/* Option 4 — Warm Clay (matches her real photos: greige + terracotta + brass).
+   A softer, warmer accent than maroon while staying in the same family. */
+html[data-theme="clay"] {
+  --color-bg: #f4ece3;
+  --color-surface: #ffffff;
+  --color-ink: #2a2420;
+  --color-muted: #7c6f60;
+  --color-accent: #b5613f;
+  --color-accent-soft: #ecdac9;
+  --color-line: #e8dccd;
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  /* Anchor links (e.g. #contact) land below the fixed nav instead of under it. */
+  scroll-padding-top: 6rem;
+}
+
+/* Premium touches: warm text selection + a clear, on-brand keyboard focus ring. */
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 3px;
 }
 
 body {
@@ -84,6 +156,8 @@ body {
   font-family: var(--font-serif);
   line-height: 1.05;
   letter-spacing: -0.01em;
+  /* Balanced line breaks for elegant, even headlines (Apple-style). */
+  text-wrap: balance;
 }
 
 /* Scroll-reveal: elements fade up as they enter the viewport.

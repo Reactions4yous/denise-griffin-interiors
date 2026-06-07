@@ -68,7 +68,7 @@ export const local = {
       county: "Pasco County",
       blurb: "Historic homes and new builds on acreage in the heart of Pasco.",
       intro:
-        "Denise Griffin Interiors is a residential interior designer based in Dade City, FL. We design warm, collected homes, from the historic houses near downtown to new builds on acreage, handling concept, sourcing, and styling start to finish, at $100/hour.",
+        "Denise Griffin Interiors is a residential interior designer based in Dade City, FL. We design warm, collected homes, from the historic houses near downtown to new builds on acreage, handling concept, sourcing, and styling start to finish.",
       body: [
         "As our home base, Dade City is where it all started. We love its oak-lined streets, brick downtown, and the mix of character-filled older homes and fresh new construction on larger lots, each one asking for a slightly different touch.",
         "Whether you're warming up a historic home or furnishing a brand-new build from empty rooms, we create interiors that feel personal, layered, and made for how you actually live.",
@@ -180,17 +180,12 @@ export const home = {
       poster: "/images/bath-vanity.jpg",
       alt: "A spa-like primary bath designed by Denise Griffin Interiors",
     },
-    {
-      src: "/images/hero-bedroom.mp4",
-      poster: "/images/primary-bath.jpg",
-      alt: "A warm primary bedroom designed by Denise Griffin Interiors",
-    },
   ],
   intro:
     "I help clients turn rooms into spaces that work for real life and still feel like a magazine spread. Every project starts with how you actually want to live in the space.",
   stats: [
     { value: "Local", label: "In person across Tampa & Pasco" },
-    { value: "$100/hr", label: "Clear, honest pricing" },
+    { value: "Tailored", label: "Pricing shaped to each project" },
     { value: "Full-service", label: "Concept to final styling" },
   ],
 };
@@ -206,7 +201,7 @@ export const services: Service[] = [
   {
     title: "Full-Service Interior Design",
     blurb:
-      "End-to-end residential design for a room or a whole home, concept, space planning, sourcing, and styling, managed start to finish.",
+      "End-to-end residential design for a single room or a whole home. I manage concept, space planning, sourcing, and styling from start to finish.",
     details: [
       "In-home consultation & space planning",
       "Custom design concept, materials & sourcing",
@@ -262,13 +257,13 @@ export const projects: Project[] = [
     gallery: ["/images/bath2-nook.jpg", "/images/bath2-detail.jpg"],
   },
   {
-    slug: "warm-primary-bedroom",
-    title: "Warm Primary Bedroom",
+    slug: "primary-bedroom-refresh",
+    title: "Primary Bedroom Refresh",
     category: "Bedroom",
     year: "2025",
     image: "/images/primary-bath.jpg",
     description:
-      "Terracotta velvet, layered knits, and a black-and-white gallery wall turn a primary bedroom into a warm, collected retreat.",
+      "A refresh that worked around the furniture this client wanted to keep, no new paint, no full remodel, layered with terracotta velvet, knits, and a collected gallery wall for a warmer, more current feel.",
     ready: true,
     gallery: ["/images/IMG_1590.jpg", "/images/IMG_1589.jpg"],
   },
@@ -277,7 +272,7 @@ export const projects: Project[] = [
     title: "Light-Filled Great Room",
     category: "Living Space",
     year: "2024",
-    image: "/images/IMG_0114.jpg",
+    image: "/images/greatroom.jpg",
     description:
       "A soaring great room grounded with botanical wallpaper, natural branches, layered textiles, and styled, collected detail.",
     ready: true,
@@ -310,24 +305,24 @@ export type BeforeAfter = {
 export const beforeAfters: BeforeAfter[] = [
   {
     title: "Spa Bath Transformation",
-    location: "Primary Bath, Dade City",
+    location: "Primary Bath",
     before: "/images/bath2-before.jpg",
     after: "/images/bath2-after.jpg",
     note: "A dated garden tub with a glass-block window and tan walls, reimagined as a light, serene spa with a sculptural freestanding tub, a hand-blown bubble chandelier, and a calm, neutral palette.",
   },
   {
     title: "Primary Bath Vanity",
-    location: "Primary Bath, Dade City",
+    location: "Primary Bath",
     before: "/images/IMG_0351.jpg",
     after: "/images/bath-vanity.jpg",
     note: "A dated vanity with a pink sink and a fluorescent box light, reimagined with a warm custom wood vanity, marble counters, brass fixtures, and a sculptural mirror.",
   },
   {
-    title: "Primary Bedroom",
-    location: "Primary Bedroom, Dade City",
+    title: "Primary Bedroom Refresh",
+    location: "Primary Bedroom",
     before: "/images/IMG_0848.jpg",
     after: "/images/primary-bath.jpg",
-    note: "A flat, beige primary bedroom restyled into a warm, collected retreat with terracotta velvet, layered knits, and a considered black-and-white gallery wall.",
+    note: "Not every project is a full remodel. Here we worked around the farmhouse furniture this client wanted to keep, with no new paint, refreshing the room with terracotta velvet, layered knits, and a collected gallery wall for a warmer, more current feel.",
   },
 ];
 
@@ -336,8 +331,8 @@ export const about = {
   portrait: "/images/denise.jpg",
   heading: "Hi, I'm Denise.",
   paragraphs: [
-    "I never planned to start a design business. It began as something personal. While my husband and I were building our home, I started sharing the journey on social media just for fun, documenting the whole construction process.",
-    "Once we moved in, I started making videos of how I was decorating and styling each room, and people connected with it. What began as a hobby quickly grew into something more, and in September 2025 I took on my very first client project.",
+    "Design has always been personal for me. While my husband and I were building our home, I began sharing the journey, documenting the construction and then the way I styled and decorated each room once we moved in.",
+    "People connected with it, and what started as a personal passion grew into designing spaces for clients across the Tampa area. It's the work I love most, helping people shape a home that feels truly like them.",
     "My approach is simple. I create warm, collected homes that feel personal and lived in, shaped around how you actually want to live. Not trends for the sake of trends, just spaces that feel like the best version of you.",
   ],
   values: [

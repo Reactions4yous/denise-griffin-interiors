@@ -54,7 +54,7 @@ export function Nav() {
         <Link href="/" onClick={() => setOpen(false)} aria-label="Home">
           <Logo
             variant={overHero ? "light" : "dark"}
-            className="h-9 w-auto md:h-10"
+            className="h-12 w-auto md:h-14"
           />
         </Link>
 
@@ -77,7 +77,7 @@ export function Nav() {
           <li>
             <Link
               href="/#contact"
-              className="rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-bg transition-colors duration-300 hover:bg-accent"
+              className="rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-bg shadow-sm transition-all duration-300 ease-soft hover:-translate-y-0.5 hover:bg-accent hover:shadow-md active:translate-y-0 active:scale-[0.98]"
             >
               Get in touch
             </Link>

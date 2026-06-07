@@ -90,7 +90,7 @@ export default function ServicesPage() {
                 </Link>
               </div>
               <p className="mt-7 text-sm tracking-wide text-bg/55">
-                $100 / hour · Dade City + 40 miles · in person
+                Tailored pricing · Dade City + 40 miles · in person
               </p>
             </div>
           </Reveal>

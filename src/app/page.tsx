@@ -16,10 +16,12 @@ export default function HomePage() {
           slides={home.heroSlides}
           className="absolute inset-0 h-full w-full"
         />
-        {/* readability scrim — bottom (text) + top (nav). Darker so the
-            hero copy stays legible over any bright frame of the video. */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/65 to-ink/35" />
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-ink/60 to-transparent" />
+        {/* Flat darkening tint — keeps the white text legible even when a clip
+            cuts to a bright/white frame (consistent floor on every frame). */}
+        <div className="absolute inset-0 bg-ink/20" />
+        {/* readability scrim — bottom (text) + top (nav). */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/55 to-ink/15" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-ink/55 to-transparent" />
 
         <div className="container-wide relative z-10 pb-16 md:pb-24 [text-shadow:0_2px_18px_rgba(0,0,0,0.45)]">
           <p className="eyebrow mb-5 animate-fade-up !text-accent-soft">
@@ -34,13 +36,13 @@ export default function HomePage() {
           <div className="mt-9 flex animate-fade-up flex-wrap gap-4">
             <Link
               href="/portfolio"
-              className="rounded-full bg-bg px-7 py-3.5 text-sm font-medium text-ink transition-colors duration-300 hover:bg-accent hover:text-bg"
+              className="rounded-full bg-bg px-7 py-3.5 text-sm font-medium text-ink shadow-lg shadow-black/20 transition-all duration-300 ease-soft hover:-translate-y-0.5 hover:bg-accent hover:text-bg hover:shadow-xl hover:shadow-black/30 active:translate-y-0 active:scale-[0.98]"
             >
               View portfolio
             </Link>
             <Link
               href="/#contact"
-              className="rounded-full border-2 border-bg px-7 py-3.5 text-sm font-medium text-bg transition-colors duration-300 hover:bg-bg hover:text-ink"
+              className="rounded-full border-2 border-bg/90 px-7 py-3.5 text-sm font-medium text-bg backdrop-blur-[2px] transition-all duration-300 ease-soft hover:-translate-y-0.5 hover:bg-bg hover:text-ink active:translate-y-0 active:scale-[0.98]"
             >
               Start a project
             </Link>

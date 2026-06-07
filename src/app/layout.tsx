@@ -4,7 +4,15 @@ import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { StructuredData } from "@/components/StructuredData";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { site } from "@/content/site";
+
+// Applies Denise's saved palette to <html> before the page paints (no flash of
+// the default colors). This inline script intentionally sets the data-theme
+// attribute before React hydrates, so <html> carries suppressHydrationWarning
+// to tell React that mismatch is expected. (Temporary preview tool — remove
+// this + <ThemeSwitcher> once a palette is locked into :root.)
+const themeScript = `(function(){try{var t=localStorage.getItem('dgi-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`;
 
 // Warm, editorial serif for headings + clean sans for body. next/font
 // self-hosts these (zero layout shift, no external requests). To try another
@@ -53,12 +61,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
+    <html
+      lang="en"
+      className={`${serif.variable} ${sans.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
         <StructuredData />
         <Nav />
         <main>{children}</main>
         <Footer />
+        <ThemeSwitcher />
       </body>
     </html>
   );

@@ -55,15 +55,6 @@ export function StructuredData() {
       "Home Styling",
       "Room Styling",
     ],
-    makesOffer: {
-      "@type": "Offer",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: local.hourlyRate,
-        priceCurrency: "USD",
-        unitText: "HOUR",
-      },
-    },
     sameAs: Object.values(site.socials).filter(Boolean),
   };
 

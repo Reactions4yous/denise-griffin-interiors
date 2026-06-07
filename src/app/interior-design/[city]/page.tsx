@@ -45,7 +45,7 @@ export default async function AreaPage({ params }: Params) {
   const faqs = [
     {
       q: `How much does an interior designer in ${area.name} cost?`,
-      a: `Denise Griffin Interiors works at $100 per hour, with clear scope set up front. Most ${area.name} projects start with an in-home consultation so you get an honest sense of investment before committing.`,
+      a: `Pricing depends on the scope of help you need. Full interior design can be a flat project fee, hourly, or by the square foot of the home. Most ${area.name} projects start with an in-home consultation so you get an honest sense of investment before committing.`,
     },
     {
       q: `Do you serve ${area.name} in person?`,
