@@ -47,14 +47,16 @@ export function Nav() {
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-soft ${
         solid
           ? "bg-bg/95 backdrop-blur-md border-b border-line shadow-[0_4px_24px_-16px_rgba(44,34,37,0.35)]"
-          : "bg-transparent"
+          : "bg-gradient-to-b from-ink/45 via-ink/10 to-transparent"
       }`}
     >
       <nav className="container-wide flex items-center justify-between py-2.5 md:py-3">
         <Link href="/" onClick={() => setOpen(false)} aria-label="Home">
           <Logo
             variant={overHero ? "light" : "dark"}
-            className="h-12 w-auto md:h-14"
+            className={`h-12 w-auto md:h-14 ${
+              overHero ? "drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)]" : ""
+            }`}
           />
         </Link>
 
@@ -66,7 +68,7 @@ export function Nav() {
                 href={l.href}
                 className={`link-underline text-sm font-medium transition-colors ${
                   overHero
-                    ? "text-bg/90 hover:text-bg"
+                    ? "text-bg hover:text-bg [text-shadow:0_1px_10px_rgba(0,0,0,0.6)]"
                     : "text-ink/80 hover:text-ink"
                 }`}
               >

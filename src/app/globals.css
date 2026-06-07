@@ -38,8 +38,12 @@
    Keep these in sync with PALETTES[] in src/components/ThemeSwitcher.tsx.
    ============================================================ */
 
-/* Option 1 — Heritage Mauve + Maroon (same as the :root default; listed so the
-   switcher can return to it). Main = warm mauve · Secondary = maroon · white. */
+/* Each palette gives the whole page its own BACKGROUND mood (not just the
+   headings/accent) — the body bg, the card/section surface, hairlines and the
+   soft accent tint all shift together. Keep these in sync with PALETTES[] in
+   src/components/ThemeSwitcher.tsx. */
+
+/* Option 1 — Heritage Mauve (same as the :root default). Warm mauve-cream. */
 html[data-theme="mauve"] {
   --color-bg: #f5efed;
   --color-surface: #ffffff;
@@ -50,40 +54,38 @@ html[data-theme="mauve"] {
   --color-line: #e6dad6;
 }
 
-/* Option 2 — Studio Greige + Maroon (Denise's stated #1: Studio McGee warm
-   greige as the MAIN, maroon as the SECONDARY, white). */
-html[data-theme="greige"] {
-  --color-bg: #f3ede4;
-  --color-surface: #ffffff;
-  --color-ink: #2b2620;
-  --color-muted: #766c5e;
+/* Option 2 — Dusty Rose. A clearly rosier, blush background. */
+html[data-theme="rose"] {
+  --color-bg: #eeddd8;
+  --color-surface: #fdf6f4;
+  --color-ink: #32262a;
+  --color-muted: #856f6e;
   --color-accent: #6f3038;
-  --color-accent-soft: #e7ddcf;
-  --color-line: #e7ded2;
+  --color-accent-soft: #e6cdc7;
+  --color-line: #e1ccc6;
 }
 
-/* Option 3 — Heritage Brown (the "if the maroon is too much" backup: warm
-   Studio McGee brown + cream, no maroon at all). */
-html[data-theme="brown"] {
-  --color-bg: #f3ede4;
-  --color-surface: #ffffff;
+/* Option 3 — Studio Greige. Warm greige/tan background (Studio McGee feel). */
+html[data-theme="greige"] {
+  --color-bg: #ebe0d1;
+  --color-surface: #fffcf6;
   --color-ink: #2b2620;
-  --color-muted: #766c5e;
-  --color-accent: #6b4a38;
-  --color-accent-soft: #e7ddcf;
-  --color-line: #e7ded2;
+  --color-muted: #786d5d;
+  --color-accent: #6f3038;
+  --color-accent-soft: #e3d6c3;
+  --color-line: #ddd0bd;
 }
 
-/* Option 4 — Warm Clay (matches her real photos: greige + terracotta + brass).
-   A softer, warmer accent than maroon while staying in the same family. */
+/* Option 4 — Warm Clay. Sandy tan background + terracotta accent (matches her
+   real photos: greige + terracotta + brass). */
 html[data-theme="clay"] {
-  --color-bg: #f4ece3;
-  --color-surface: #ffffff;
+  --color-bg: #f0e2d2;
+  --color-surface: #fffaf2;
   --color-ink: #2a2420;
-  --color-muted: #7c6f60;
+  --color-muted: #7c6f5e;
   --color-accent: #b5613f;
-  --color-accent-soft: #ecdac9;
-  --color-line: #e8dccd;
+  --color-accent-soft: #ecd6c3;
+  --color-line: #e6d6c2;
 }
 
 * {
