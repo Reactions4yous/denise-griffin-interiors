@@ -19,7 +19,7 @@ export function Footer() {
       <div className="container-wide section !py-16">
         <div className="grid gap-10 md:grid-cols-4">
           <div>
-            <Logo />
+            <Logo className="h-16 w-auto md:h-20" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
               {site.tagline}
             </p>

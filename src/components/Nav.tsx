@@ -54,7 +54,7 @@ export function Nav() {
         <Link href="/" onClick={() => setOpen(false)} aria-label="Home">
           <Logo
             variant={overHero ? "light" : "dark"}
-            className={`h-12 w-auto md:h-14 ${
+            className={`h-14 w-auto md:h-16 ${
               overHero ? "drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)]" : ""
             }`}
           />

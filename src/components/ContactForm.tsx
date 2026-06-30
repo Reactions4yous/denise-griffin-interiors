@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { site } from "@/content/site";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -125,7 +126,7 @@ export function ContactForm() {
       {status === "error" && (
         <p className="text-sm text-red-700" role="alert">
           {error} You can also email{" "}
-          <a className="link-underline" href="mailto:hello@denisestyling.com">
+          <a className="link-underline" href={`mailto:${site.email}`}>
             directly
           </a>
           .

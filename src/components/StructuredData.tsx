@@ -1,6 +1,6 @@
 import { site, local } from "@/content/site";
 
-const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.denisestyling.com";
+const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.denisegriffininteriors.com";
 
 /**
  * JSON-LD structured data (LocalBusiness).
