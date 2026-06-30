@@ -13,13 +13,16 @@
      Main = warm mauve/dusty-rose neutrals · Secondary = maroon · + white.
      (Option 2, the Studio McGee brown+cream backup, is noted at the bottom
      of this file — swap the values to switch palettes.) */
-  --color-bg: #f5efed;        /* page background — soft warm mauve-cream (MAIN) */
-  --color-surface: #ffffff;   /* cards / raised areas — white */
-  --color-ink: #2c2225;       /* primary text — deep aubergine-brown */
-  --color-muted: #7d6e6f;     /* secondary text — muted mauve-taupe */
-  --color-accent: #6f3038;    /* brand accent — maroon (SECONDARY) */
-  --color-accent-soft: #ead9d7;/* dusty-rose tint for hovers/sections */
-  --color-line: #e6dad6;      /* hairline borders */
+  /* DEFAULT = Sage + Espresso (Denise's chosen direction on the phone: grey-green
+     and espresso brown, NOT cream — it matches her real rooms: sage cabinets,
+     wood tones, brass). The other options live in the switcher below. */
+  --color-bg: #dfe2d8;        /* page background — soft grey-green / sage (MAIN) */
+  --color-surface: #edf0e7;   /* cards / raised areas — pale sage */
+  --color-ink: #2a2119;       /* primary text — espresso brown */
+  --color-muted: #6f7062;     /* secondary text — grey-green taupe */
+  --color-accent: #59412f;    /* brand accent — espresso brown */
+  --color-accent-soft: #d2d8c7;/* soft sage tint for hovers/sections */
+  --color-line: #ccd1c2;      /* hairline borders — sage grey */
 
   /* Typography is injected by next/font in layout.tsx, which defines
      --font-serif (Cormorant Garamond) and --font-sans (Inter) on <html>. */
@@ -65,15 +68,16 @@ html[data-theme="rose"] {
   --color-line: #e1ccc6;
 }
 
-/* Option 3 — Studio Greige. Warm greige/tan background (Studio McGee feel). */
+/* Option 3 — Sage + Espresso (the DEFAULT; matches :root). Grey-green background,
+   espresso text + dark elements, espresso-brown accent. Denise's chosen look. */
 html[data-theme="greige"] {
-  --color-bg: #ebe0d1;
-  --color-surface: #fffcf6;
-  --color-ink: #2b2620;
-  --color-muted: #786d5d;
-  --color-accent: #6f3038;
-  --color-accent-soft: #e3d6c3;
-  --color-line: #ddd0bd;
+  --color-bg: #dfe2d8;
+  --color-surface: #edf0e7;
+  --color-ink: #2a2119;
+  --color-muted: #6f7062;
+  --color-accent: #59412f;
+  --color-accent-soft: #d2d8c7;
+  --color-line: #ccd1c2;
 }
 
 /* Option 4 — Warm Clay. Sandy tan background + terracotta accent (matches her
@@ -148,8 +152,9 @@ body {
 
 .eyebrow {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-accent);
 }

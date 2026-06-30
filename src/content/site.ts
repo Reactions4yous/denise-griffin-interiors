@@ -272,11 +272,21 @@ export const projects: Project[] = [
     title: "Light-Filled Great Room",
     category: "Living Space",
     year: "2024",
-    image: "/images/greatroom.jpg",
+    image: "/images/greatroom-owl.jpg",
     description:
-      "A soaring great room grounded with botanical wallpaper, natural branches, layered textiles, and styled, collected detail.",
+      "A soaring great room grounded with botanical wallpaper, framed art, natural branches, and styled, collected detail.",
     ready: true,
-    gallery: ["/images/IMG_2588.jpg"],
+    gallery: ["/images/greatroom-styling.jpg"],
+  },
+  {
+    slug: "patterned-kitchen",
+    title: "Patterned Kitchen",
+    category: "Kitchen",
+    year: "2025",
+    image: "/images/kitchen.jpg",
+    description:
+      "A kitchen given character with hand-painted patterned tile, a soft sage palette, a deep basin sink, and warm brass fixtures.",
+    ready: true,
   },
   {
     slug: "spa-like-primary-bath",
@@ -287,7 +297,7 @@ export const projects: Project[] = [
     description:
       "A dated primary bath reimagined with a warm custom wood vanity, marble counters, brass fixtures, a sculptural mirror, and soft, spa-like calm.",
     ready: true,
-    gallery: ["/images/bath1-chair.jpg"],
+    gallery: ["/images/bath1-chair-v2.jpg"],
   },
 ];
 

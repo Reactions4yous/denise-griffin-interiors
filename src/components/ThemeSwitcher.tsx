@@ -29,6 +29,22 @@ type Palette = {
 
 const PALETTES: Palette[] = [
   {
+    id: "greige",
+    name: "Sage & Espresso",
+    note: "Grey-green · espresso brown",
+    bg: "#dfe2d8",
+    accent: "#59412f",
+    ink: "#2a2119",
+  },
+  {
+    id: "clay",
+    name: "Warm Clay",
+    note: "Sandy tan · terracotta",
+    bg: "#f0e2d2",
+    accent: "#b5613f",
+    ink: "#2a2420",
+  },
+  {
     id: "mauve",
     name: "Heritage Mauve",
     note: "Warm mauve-cream · maroon",
@@ -44,25 +60,9 @@ const PALETTES: Palette[] = [
     accent: "#6f3038",
     ink: "#32262a",
   },
-  {
-    id: "greige",
-    name: "Studio Greige",
-    note: "Warm greige · maroon",
-    bg: "#ebe0d1",
-    accent: "#6f3038",
-    ink: "#2b2620",
-  },
-  {
-    id: "clay",
-    name: "Warm Clay",
-    note: "Sandy tan · terracotta",
-    bg: "#f0e2d2",
-    accent: "#b5613f",
-    ink: "#2a2420",
-  },
 ];
 
-const DEFAULT_ID = "mauve";
+const DEFAULT_ID = "greige";
 
 export function ThemeSwitcher() {
   const [open, setOpen] = useState(false);
